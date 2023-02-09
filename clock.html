@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Digital Clock
+</title>
+<script>
+function starttime()
+{
+var today=new Date()
+var h=today.getHours()
+var m=today.getMinutes()
+var s=today.getSeconds()
+m=checktime(m)
+s=checktime(s)
+
+f1.t1.value= h + " : " + m + " : " + s
+setTimeout("starttime()",500)
+}
+
+functionchecktime(i)
+{
+var i
+if(i<10)
+    {
+      i="0"+i
+    }
+return i
+ }
+
+</script>
+</head>
+<body onload=starttime()>
+    <br><br>
+    <h1 align =center>Digital Clock</h1>
+    <hr color=red size=5><br><br><br><br>
+
+    <form name="f1">
+    <table border="10"><tr><td><h4>India Time - GMT : 5 . 30</td></tr>
+    <tr><th><input type=text value="" name="t1"></th></tr></table>
+    </form>
+    </body>
+    </html>
+    

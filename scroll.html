@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+Scroll the text on the statusbar
+</title>
+<script>
+var ms="R.M.K. Engineering College"
+var st=new String(ms)
+var c=0
+function scrollstatus()
+{
+window.status=ms.substring(c,st.length) + ms.substring(0,c)
+c++
+if(c>st.length)
+    c=0
+setTimeout("scrollstatus()",500)
+}
+</script>
+</head>
+<body onload=scrollstatus()>
+<br><br>
+<h1 align=center>Scroll the Text on the status bar</h1>
+<hr color=red size=5><br><br><br><br>
+</body>
+</html>
